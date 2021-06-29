@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Masked Hunters | Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="background: #5db5e8 !important; top: 0px;">
+	    <div class="container">
+			<a class="navbar-brand" href="index.html"><img src="images/logo4.png" style="width: 280px; height: 70px;" /></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="search.html" class="nav-link">Search</a></li>
+	          <li class="nav-item"><a href="news.html" class="nav-link">Latest News</a></li>
+	          <li class="nav-item"><a href="blog.html" class="nav-link">Precautions</a></li>
+	          <li class="nav-item"><a href="blog.html" class="nav-link">Hospitals</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+	<section class="home-slider owl-carousel" style="height:500px;">
+		<div class="slider-item bread-item" style="background-image: url('images/banner.png'); height:500px;" data-stellar-background-ratio="0.5">
+		  <div class="overlay"></div>
+		  <div class="container" data-scrollax-parent="true">
+			<div class="row slider-text align-items-end">
+			  <div class="col-md-7 col-sm-12 ftco-animate mb-5">
+				<p class="breadcrumbs" data-scrollax=" properties: { translateY: '70%', opacity: 1.6}"><span class="mr-2"><a href="index.html">Home</a></span> <span>Search</span></p>
+				<h1 class="mb-3" data-scrollax=" properties: { translateY: '70%', opacity: .9}">Search Resources Availability</h1>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+	<section class="ftco-intro" style="background: linear-gradient(rgb(247 157 139 / 20%), rgb(247 157 139 / 20%));">
+    	<div class="container" style="margin-top: -130px;">
+    		<div class="row no-gutters">
+    		<div class="col-md-12 color-3 p-4">
+    			<form action="#" class="appointment-form">
+	            <div class="row">
+				  <div class="col-sm-4">
+	                <div class="form-group">
+			        <div class="select-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+					  <select data-filter="hospital" class="filter-hospital filter form-control">
+						<option value="">Select Hospital</option>
+						<option value="">Show All</option>
+					  </select>
+                      </div>
+			        </div>
+	              </div>
+				  <div class="col-sm-4">
+				  <div class="form-group">
+					<div class="select-wrap">
+					<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+					<select data-filter="loc" class="filter-loc filter form-control">
+						<option value="">Select Location</option>
+						<option value="">Show All</option>
+					</select>
+					</div>
+					</div>
+				  </div>
+	              <div class="col-sm-4">
+	              <div class="form-group">
+			        <div class="select-wrap">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+					<select data-filter="type" class="filter-type filter form-control">
+						<option value="">Select Type</option>
+						<option value="">Show All</option>
+					</select>
+					</div>
+			        </div>
+	              </div>
+				  <!--<div id="search" style="display: -webkit-inline-box;">
+					<form id="search-form" action="" method="POST" enctype="multipart/form-data">
+	                	<div class="form-group">
+							<input class="form-control" type="text" placeholder="Search"/>
+	              		</div>
+                		<div class="Search" style="margin-top: 10px;">
+							<button type="submit" class="btn btn-block" value="Search" style="background: #fff; width: 170px;">Search</button>
+                		</div>
+					</form>
+				  </div>-->
+	            </div>
+	          	</form>
+				  <div class="row no-gutters" id="search">
+					<div class="col-md-12 color-3 p-4">
+						<form id="search-form" action="" method="POST" enctype="multipart/form-data" class="appointment-form">
+						<div class="row">
+						  <div class="col-sm-8">
+							<div class="form-group">
+						<!--<form id="search-form" action="" method="POST" enctype="multipart/form-data">
+			  			<div style="display: flex;">--> 
+								<input class="appointment-form form-control" type="text" placeholder="Search" style="-webkit-appearance: none; -moz-appearance: none; appearance: none; background: transparent !important; border-bottom: 1px solid rgba(255, 255, 255, 0.2); color: #fff !important; font-size: 14px; padding-right: 20px !important; mix-blend-mode: color-dodge;"/>
+							</div>
+						  </div>
+							<div class="col-sm-4">
+							<div class="form-group">
+								<button type="submit" class="btn btn-block btn-primary" style="background: #fff; width: 170px; color: #000; border-radius: 20px;">Search</button>
+							</div> 
+							</div>
+			  			</form>
+    				</div>
+    			</div>
+    		</div>
+		</div>
+    </section>
+  
+	<section class="ftco-section"  style="background-image: linear-gradient(rgb(247 157 139 / 20%), rgb(139 192 247 / 69%));">
+      <div class="container" style="margin-top: -20px;">
+      	<div class="row justify-content-center mb-5 pb-5">
+          <!--<div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mb-2">Search Resources Availability Here</h2>
+            <p>Your can search by any keyword like Hospital Name, Hospital Location, etc.</p>
+          </div>
+        </div>-->
+
+		<!-- partial:index.partial.html -->
+		<div class="container" style="background-color: white; border-radius: 10px;">
+  		<div id="search" style="display: -webkit-inline-box;">
+		<form id="search-form" action="" method="POST" enctype="multipart/form-data">
+      		<div> 
+			<!--<div class="form-group col-xs-4">
+				<input class="form-control" type="text" placeholder="Search"/>
+			</div>
+			<div class="form-group col-xs-4">
+				<button type="submit" class="btn btn-block btn-primary">Search</button>
+			</div> -->
+
+			<div class="form-group row" style="flex-wrap: initial; margin-left: 35px; margin-top: 25px;"> 	
+        	<!-- Show Numbers Of Rows -->
+				<label style="margin-top: 18px;">Select No.of rows to display</label> 
+				<select class  ="form-control" name="state" id="maxRows" style="width: 100px; margin-left: 	10px;">
+					<option value="5000">Show ALL Rows</option>
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="70">70</option>
+					<option value="100">100</option>
+				</select>
+			</div>
+        	</div>
+      	</form>
+    	</div>
+
+      	<table class="table table-striped table-hover table-responsive" id="userdata" style="margin: 25px; margin-top:0px;">            
+        	<th>Image</th>
+        	<th>Hospital Name</th>
+        	<th>Location</th>
+        	<th>Type</th>
+        	<th>Beds</th>
+        	<th>Oxygen</th>
+        	<th>ICU Beds</th>
+        	<th>Actions</th>     
+      	</table>
+      
+      	<!-- Start Pagination -->
+		  <div class="pagination-container pagination row mt-5" style="background: linear-gradient(rgb(139 217 247 / 15%), rgb(247 139 139 / 20%));">
+			<div class="col-sm-12">
+			  <div class="block-27 d-flex justify-content-center" style="margin-top: 30px;">
+	    		<nav>
+	        		<ul class="pagination" style="margin-bottom:50px;">
+            			<li data-page="prev">
+							<span style="width:100px; border-radius: 15px;"> Prev <span class="sr-only">(current)</span></span>
+						</li>
+	        			<!-- Here the JS Function Will Add the Rows -->
+            			<li data-page="next" id="prev">
+							<span style="width:100px; border-radius: 15px;"> Next <span class="sr-only">(current)</span></span>
+						</li>
+	        		</ul>
+	    		</nav>
+      		  </div> 
+			</div>
+      	<!-- End of Container -->
+      
+      		<div class="row" id="products">
+        
+      		</div>
+  		</div>
+
+      <!-- Modal -->
+	  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document" style="max-width: 900px;">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel"><span id="myTitle"></span></h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>	
+			</div>
+			<div class="modal-body">
+			<span id="myVar"></span>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+	  		</div>
+		  </div>
+  		</div>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Masked Hunters</h2>
+              <p>Providing availability details of Beds, Oxygen Cylinders, ICU Beds for Covid-19 patients.</p>
+            </div>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft ">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">About</a></li>
+                <li><a href="#" class="py-2 d-block">Search</a></li>
+                <li><a href="#" class="py-2 d-block">Latest News</a></li>
+                <li><a href="#" class="py-2 d-block">Precautions</a></li>
+                <li><a href="#" class="py-2 d-block">Hospitals</a></li>
+                <li><a href="#" class="py-2 d-block">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 pr-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Latest News</h2>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Wash your hands regularly in every half an hour.</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> May 15, 2021</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Use sanitizer oon frequently touched surfaces to kill virus.</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> June 12, 2021</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 27</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Office</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">000, Sample location, Sample District, Sample State - 000000</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9876543210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">sample@maskedhunters.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+		<hr style="background-color: #fff;"/>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Masked Hunters
+  			</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+	<!-- scroll to top -->
+	<!--<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i><b>^</b></a>-->
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalRequest" tabindex="-1" role="dialog" aria-labelledby="modalRequestLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRequestLabel">Make an Appointment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+			<form name="gform" id="gform" encrypt="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdFnk6qnYG5V-obrjwfsHor3lLqqNFkwGdyvPthhXrx60MBhQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+			  <div class="form-group">
+				<!-- <label for="appointment_name" class="text-black">Full Name</label> -->
+				<input type="text" class="form-control" id="entry.205990107" name="entry.205990107" required placeholder="Full Name">
+			  </div>
+			  <div class="form-group">
+				<!-- <label for="appointment_email" class="text-black">Email</label> -->
+				<input type="text" class="form-control" id="entry.1648110259" name="entry.1648110259" required placeholder="Email">
+			  </div>
+			  <div class="row">
+				<div class="col-md-6">
+				  <div class="form-group">
+					<!-- <label for="appointment_date" class="text-black">Date</label> -->
+					<input type="text" class="form-control" id="entry.1386383147" name="entry.1386383147" required placeholder="Mobile">
+				  </div>    
+				</div>
+			  </div>
+			  <div class="form-group">
+				<!-- <label for="appointment_message" class="text-black">Message</label> -->
+				<textarea name="entry.1886532837" id="entry.1886532837" class="form-control" cols="30" rows="10" required placeholder="Message"></textarea>
+			  </div>
+			  <div class="form-group">
+				<input type="submit" value="Send Message" class="btn btn-primary">
+			  </div>
+			</form>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+  
+			<script src="assets/js/jquery.min.js"></script>
+			<script type="text/javascript">var submitted=false;</script>
+			<script type="text/javascript">
+				$('#gform').on('submit', function(e) {
+					$('#gform *').fadeOut(2000);
+					$('#gform').prepend('Your submission has been processed...');
+				 });
+			</script>
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+
+
+  <script> 
+    var data = [
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+	{
+		"hospital": "Apollo_Hospitals ",
+		"loc": "Hyderabad ",
+		"type": "Super_Speciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9876345676 ",
+		"email": "apollohealthcare@gmail.com ",
+		"address": "Road_72,_Film_Nagar,_Jubilee_Hills,_Hyderabad,_Telangana,_500033 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.934404869275!2d78.41022501409809!3d17.414935306595574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals!5e0!3m2!1sen!2sin!4v1624554810003!5m2!1sen!2sin ",
+		"image": "images/apollo2.jpg",
+	},
+	{
+		"hospital": "Ramesh_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Multi_Speciality ",
+		"beds": "40 ",
+		"oxygen": "20 ",
+		"icu": "30 ",
+		"phone": "8765456787 ",
+		"email": "rameshhospitals@gmail.com ",
+		"address": "Near_Market_Signal,_Old_Guntur,_Andhra_Pradesh,_522001 ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.578138211549!2d80.44031541408242!3d16.29337783772148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7541dfb7c1e3%3A0x7ec1d2166ad7d7b8!2sRamesh%20Hospitals!5e0!3m2!1sen!2sin!4v1624557381155!5m2!1sen!2sin ",
+		"image": "images/ramesh_hospitals1.png",
+	},
+	{
+		"hospital": "Lalitha_Hospital ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865456545 ",
+		"email": "lalithahospitals@gmail.com ",
+		"address": "Kothapet_Main_Road,_Kothapeta,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.5347190745306!2d80.44741381408247!3d16.295600137661793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a753604648f75%3A0xfcf9c52530630688!2sLalitha%20Super%20Speciality%20Hospitals!5e0!3m2!1sen!2sin!4v1624558216556!5m2!1sen!2sin ",
+		"image": "images/lalitha_hospital2.png",
+	},
+	{
+		"hospital": "Life_Hospitals ",
+		"loc": "Guntur ",
+		"type": "Clinic ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "7865323654 ",
+		"email": "lifehospitals@gmail.com ",
+		"address": "Old_Club_Road,_Coastal_Andhra_Region,_GV_Thota,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.480045713621!2d80.45304611408245!3d16.29839803758658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a0ab4d116e7cb%3A0x1519f5081884be0a!2sLife%20Hospital%20-%20Interventional%20Neurology%2C%20Cardiology%20in%20Guntur!5e0!3m2!1sen!2sin!4v1624558434673!5m2!1sen!2sin ",
+		"image": "images/life_hospitals.png"
+	},
+	{
+		"hospital": "American_Hospital ",
+		"loc": "Ponnur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "987354676 ",
+		"email": "americanhospital@gmail.com ",
+		"address": "GBC_Road,_Ponnur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0600541853146!2d80.5476934140793!3d16.06237314388988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a115ea05636bf%3A0xf5dfcf3e2df993ea!2sThe%20Salvation%20Army%20Evangeline%20Booth%20Hospital%2C%20Ponnur.%20(AMERICAN%20HOSPITAL)!5e0!3m2!1sen!2sin!4v1624558613602!5m2!1sen!2sin ",
+		"image": "images/american_hospitals.jpg"
+	},
+	{
+		"hospital": "Government_Hospital ",
+		"loc": "Guntur ",
+		"type": "Government_Hospital ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "8764637254 ",
+		"email": "ggh.guntur@gmail.com ",
+		"address": "GGH_Road,_Sambasiva_Pet,_Guntur,_Andhra_Pradesh ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.447574259858!2d80.4417249140825!3d16.300059537541827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7548aafa6cc3%3A0x870890b8d106eec3!2sGGH%20Rd%2C%20Sambasiva%20Pet%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1624558864492!5m2!1sen!2sin ",
+		"image": "images/ggh.jpg"
+	},
+	{
+		"hospital": "Columbia_Asia ",
+		"loc": "Bangalore ",
+		"type": "Super_peciality ",
+		"beds": "32 ",
+		"oxygen": "60 ",
+		"icu": "20 ",
+		"phone": "9875672376 ",
+		"email": "columbia.asia@gmail.com ",
+		"address": "Columbia_Asia_Hospital,_Malleshwaram,_Bangalore,_Karnataka ",
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3370523960457!2d77.55387811404393!3d13.014195317465285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162a55555555%3A0x886d228d64097005!2sColumbia%20Asia%20Referral%20Hospital%20%E2%80%93%20Yeshwanthpur!5e0!3m2!1sen!2sin!4v1624559017325!5m2!1sen!2sin ",
+		"image": "images/columbia_asia.png"
+	},
+];
+
+var products = "",
+	hospitals = "",
+	locs = "",
+	types = "";
+
+for (var i = 0; i < data.length; i++) {
+	var hospital = data[i].hospital,
+		loc = data[i].loc,
+		type = data[i].type,
+		beds = data[i].beds,
+		oxygen = data[i].oxygen,
+		icu = data[i].icu,
+		link = data[i].link,
+		rawbeds = beds.replace("$",""),
+		rawbeds = parseInt(rawbeds.replace(",","")),
+		image = data[i].image,
+		phone = data[i].phone,
+		email = data[i].email,
+		address = data[i].address,
+		map = data[i].map;
+
+		if(link){
+			var links = link.split('href=')[1];
+		}
+
+	//create product cards
+	// products += "<div class='col-sm-4 product' data-hospital='" + hospital + "' data-loc='" + loc + "' data-type='" + type + "' data-beds='" + rawbeds + "'><div class='product-inner text-center'><img src='" + image + "'><br />hospital: " + hospital + "<br />loc: " + loc + "<br />Type: " + type + "<br />Beds: " + beds + "<br />Oxygen: " + oxygen + "<br />ICU Beds: " + icu + "<br /><a href='"+ links +"'>" + links + "</a><br /><button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#myModal'>Open Modal</button><br/><button type='button' id='myButton' class='btn btn-primary' data-toggle='modal' data-target='#exampleModal' onclick='myFunction()'>Launch demo modal</button></div></div>";
+	
+	// onclick view more button
+	function myFunction() {
+		var text = "My text";
+		document.getElementById("myVar").innerHTML = products;
+	  }
+
+	//create dropdown of hospitals
+	if (hospitals.indexOf("<option value='" + hospital + "'>" + hospital + "</option>") == -1) {
+		hospitals += "<option value='" + hospital + "'>" + hospital + "</option>";
+	}
+	
+	//create dropdown of locs
+	if (locs.indexOf("<option value='" + loc+"'>" + loc + "</option>") == -1) {
+		locs += "<option value='" + loc + "'>" + loc + "</option>";
+	}
+	
+	//create dropdown of types
+	if (types.indexOf("<option value='" + type + "'>" + type + "</option>") == -1) {
+		types += "<option value='" + type + "'>" + type + "</option>";
+	}
+}
+
+$("#products").html(products);
+$(".filter-hospital").append(hospitals);
+$(".filter-loc").append(locs);
+$(".filter-type").append(types);
+
+var filtersObject = {};
+
+//on filter change
+$(".filter").on("change",function() {
+	var filterName = $(this).data("filter"),
+		filterVal = $(this).val();
+	
+	if (filterVal == "") {
+		delete filtersObject[filterName];
+	} else {
+		filtersObject[filterName] = filterVal;
+	}
+	
+	var filters = "";
+	
+	for (var key in filtersObject) {
+	  	if (filtersObject.hasOwnProperty(key)) {
+			filters += "[data-"+key+"='"+filtersObject[key]+"']";
+	 	}
+	}
+	
+	if (filters == "") {
+		$(".product").show();
+	} else {
+		$(".product").hide();
+		$(".product").hide().filter(filters).show();
+	}
+});
+
+//on search form submit
+$("#search-form").submit(function(e) {
+	e.preventDefault();
+	var query = $("#search-form input").val().toLowerCase();
+
+	$(".product").hide();
+	$(".product").each(function() {
+		var hospital = $(this).data("hospital").toLowerCase(),
+			loc = $(this).data("loc").toLowerCase(),
+			type = $(this).data("type").toLowerCase();
+
+		if (hospital.indexOf(query) > -1 || loc.indexOf(query) > -1 || type.indexOf(query) > -1) {
+			$(this).show();
+		}
+	});
+});
+
+// bootstrap table 
+for (var i = 0; i < data.length; i++) {
+    var hospital = data[i].hospital,
+loc = data[i].loc,
+type = data[i].type,
+beds = data[i].beds,
+oxygen = data[i].oxygen,
+icu = data[i].icu,
+link = data[i].link,
+rawbeds = beds.replace("$",""),
+rawbeds = parseInt(rawbeds.replace(",","")),
+image = data[i].image,
+phone = data[i].phone,
+email = data[i].email,
+address = data[i].address,
+map = data[i].map;
+
+
+// show popup
+$(".cell-which-triggers-popup").click(function(event){
+  var cell_value = $(event.target).text();
+  showPopup(cell_value)    
+});
+
+function showPopup(your_variable){
+  $("#popup").dialog({
+      width: 500,
+      height: 300,
+      open: function(){
+          $(this).find("p").html("Hello " + your_variable)
+      }
+  });
+}
+
+function myData() {
+	var text = "My text";
+	document.getElementById("myTitle").innerHTML = this.hospital;
+	document.getElementById("myVar").innerHTML = this.hospital;
+  }
+
+ // <div class='col-sm-4 product' data-hospital='" + hospital + "' data-loc='" + loc + "' data-type='" + type + "' data-beds='" + rawbeds + "'>
+
+    var tblRow = "<tr class='product' data-hospital='" + hospital + "' data-loc='" + loc + "' data-type='" + type + "' data-beds='" + rawbeds + "'><td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal'><img class='image' src=" + image +
+		"><td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal'>" + hospital +  
+					"</td><td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal'>" + loc + 
+                    "</td><td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal'>" + type +
+                    "</td><td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal'>" + beds + 
+                    "</td><td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal'>" + oxygen + 
+                    "</td><td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal'>" + icu + 
+                    "<td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal' style='display:none;'>" + phone + 
+					"</td><td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal' style='display:none;'>" + email + 
+					"</td><td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal' style='display:none;'>" + address + 
+					"</td><td class='cell-which-triggers-popup use-address' data-toggle='modal' data-target='#exampleModal' style='display:none;'>" + map + 
+					"</td><td><button type='button' id='myButton' class='btn btn-primary use-address' data-toggle='modal' data-target='#exampleModal'>View More</button>" 
+					"</td></tr>"
+    $(tblRow).appendTo("#userdata tbody");
+};
+
+// getting values to popup when onclick
+$(".use-address").click(function() {
+    var $row = $(this).closest("tr");    // Find the row
+    var $text = $row.find(".cell-which-triggers-popup").text(); // Find the text
+    var $img = $row.find(".cell-which-triggers-popup").find("img"); // Find the image
+	var $image = $img.attr("src");
+	var $str = $text.split(" ");;
+	console.log($str,$image);
+
+	// Let's test it out
+    // alert($text);
+	document.getElementById("myTitle").innerHTML = "<h3>" + $str[0] + "</h3>";
+	document.getElementById("myVar").innerHTML = "<table class='table table-responsive'><tr><td><iframe src=" + $str[9] + 
+												" width='820' height='300' style='border:0;' allowfullscreen='' loading='lazy'></iframe></td></tr></table><br/><table class='table table-striped table-responsive table-hover'><tr><td></td></tr><tr><td>Location: " + $str[1] +
+												"</td><td>Type: " + $str[2] +
+												"</td><td>Address: " + $str[8] +
+												"</td></tr><tr><td>Available Beds: " + $str[3] +
+												"</td><td>Available Oxygen Cylinders: " + $str[4] +
+												"</td><td>Available ICU Beds: " + $str[5] +
+												"</td></tr><td  colspan='2'>Contact: " + $str[6] +
+												"</td><td>Email: " + $str[7] +
+												"</td></tr></table>";
+});
+
+// scroll to top button
+$(document).ready(function(){
+	$(window).scroll(function () {
+			if ($(this).scrollTop() > 50) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		// scroll body to 0px on click
+		$('#back-to-top').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
+});
+</script>
+
+<style>
+    .product {
+        margin-bottom: 30px;
+    }
+    .product-inner {
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        padding: 10px;
+    }
+    .product img {
+        margin-bottom: 10px;
+    }
+	.image {
+		width: 200px;
+	}
+	.image-popup {
+		width: 450px;
+	}
+	.back-to-top {
+		position: fixed;
+		bottom: 25px;
+		right: 25px;
+		border-radius: 5px;
+		display: none;
+	}
+	@media (min-width: 1200px){
+		.container, .row {
+    		max-width: 1140px;
+		}
+	}
+</style>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+<script  src="./js/script.js"></script>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  <script type="text/javascript">!function(t,e){t.artibotApi={l:[],t:[],on:function(){this.l.push(arguments)},trigger:function(){this.t.push(arguments)}};var a=!1,i=e.createElement("script");i.async=!0,i.type="text/javascript",i.src="https://app.artibot.ai/loader.js",e.getElementsByTagName("head").item(0).appendChild(i),i.onreadystatechange=i.onload=function(){if(!(a||this.readyState&&"loaded"!=this.readyState&&"complete"!=this.readyState)){new window.ArtiBot({i:"23e6b38e-247b-487b-bb4d-19a14157c4bb"});a=!0}}}(window,document);</script>
+  </body>
+</html>
