@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HospitalsList</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+}
+.button {
+background:white;
+  font-size: 1em;
+  padding: 10px;
+  color:black;
+  border: 3px solid cyan;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background:cyan;
+}
+ 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+ 
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+height:100%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+ 
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+}
+ 
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+ 
+ 
+.container .btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 10px 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+ 
+.container img {
+  width: 100%;
+  height: auto;
+}
+ 
+.container .btn:hover {
+  background-color: black;
+  color: white;
+}
+.centered {
+font-color:cyan;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+}
+ 
+ 
+.heading {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  padding:3rem 0;
+  color:cyan;
+}
+ 
+.heading span {
+  display: block;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 10px;
+  text-align: center;
+}
+    </style>
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+     <div class="container">
+       <a class="navbar-brand" href="index.html">Masked <span>Hunters</span>
+
+  </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="oi oi-menu"></span> Menu
+       </button>
+
+       <div class="collapse navbar-collapse" id="ftco-nav">
+         <ul class="navbar-nav ml-auto">
+           <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+           <li class="nav-item"><a href="search.html" class="nav-link">Search</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Latest News</a></li>
+           <li class="nav-item"><a href="blog.html" class="nav-link">Precautions</a></li>
+           <li class="nav-item"><a href="hospitals.html" class="nav-link">Hospitals</a></li>
+           <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+           <li class="nav-item cta"><a href="contact.html" class="nav-link" data-toggle="modal" data-target="#modalRequest"><span>Raise Query</span></a></li>
+         </ul>
+       </div>
+     </div>
+   </nav>
+
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item bread-item" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container" data-scrollax-parent="true">
+          <div class="row slider-text align-items-end">
+            <div class="col-md-7 col-sm-12 ftco-animate mb-5">
+              <p class="breadcrumbs" data-scrollax=" properties: { translateY: '70%', opacity: 1.6}"><span class="mr-2"><a href="index.html">Home</a></span> <span>Services</span></p>
+              <h1 class="mb-3" data-scrollax=" properties: { translateY: '70%', opacity: .9}">HOSPITALS ARE ABOUT HEALING.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="head">
+        <center>Hospitals List</center>  
+      </div>
+    </section>
+    <section>
+        <div class="para">
+          <center>
+          <p>A Hospital is a place where the sick, injured and emergency case are taken for treatment. The doctors and nurses are readily available there for admitting and attending on their patients and nurses are very care fully. They are employed by the hospitals to nurse the sick back to heath.</p></center>
+          <center><p>The dedicated teams of doctors and nurses delivers the message of hope to their patients in the hospitals. All over the world, hospitals are built to treat and cure thousands of the sick patients. As these hospitals, there are very well-equipped facilities and expert doctors. These hospitals are considered the best places for effective treatment.In this below list some of the hospitals list for covid patients,avalible beds and oxygens. </p></center>
+        </div>
+    </section>
+    <section>
+<center>
+ 
+<table>
+<tr>
+<th><div class="container">
+ <img src="images/1.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Karnthi Hospital </b></h1></div>
+ <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Karnthi Hospital</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Hospital, an institution that is built, staffed, and equipped for the diagnosis of disease; for the treatment, both medical and surgical, of the sick and the injured; and for their housing during this process. The modern hospital also often serves as a centre for investigation and for teaching.
+<img src="images/v1.jpg" alt="Snow" style="width:300px;height:250px;"><br><br>
+<div class="grid-container">
+  <div class="grid-item">availability of beds:20</div>
+  <div class="grid-item">availability of oxygen:20</div>
+  <div class="grid-item">availability of vaccine:20</div>   
+</div>
+    </div>
+  </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+ 
+<th><div class="container">
+<img src="images/2.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>SVRRGG Hospital </b></h1></div>
+ <a class="button" href="#popup2"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup2" class="overlay">
+  <div class="popup">
+    <h2>SVRRGG Hospital</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Hospital, an institution that is built, staffed, and equipped for the diagnosis of disease; for the treatment, both medical and surgical, of the sick and the injured; and for their housing during this process. The modern hospital also often serves as a centre for investigation and for teaching.
+      <img src="images/v2.jpg" alt="Snow" style="width:400px;height:250px;"><br><br>
+      <div class="grid-container">
+  <div class="grid-item">availability of beds:20</div>
+  <div class="grid-item">availability of oxygen:20</div>
+  <div class="grid-item">availability of vaccine:20</div>   
+</div>
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th><div class="container">
+  <img src="images/3.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Sunstar hospital</b></h1></div>
+  <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+</tr>
+</table>
+<h1></h1>
+<h1></h1><br>
+<table>
+<tr>
+<th><div class="container">
+ <img src="images/4.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Hope hospital</b></h1></div>
+ <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+ 
+<th><div class="container">
+<img src="images/5.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>KIMS hospital</b></h1></div>
+ <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th><div class="container">
+  <img src="images/6.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Srinidhi hospital</b></h1></div>
+  <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+</tr>
+</table>
+<h1></h1>
+<h1></h1>
+</table>
+<h1></h1>
+</h1></h1><br>
+<table>
+<tr>
+<th><div class="container">
+ <img src="images/7.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Laxmi hospital</b></h1></div>
+ <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+ 
+<th><div class="container">
+<img src="images/8.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>GGH hospital</b></h1></div>
+ <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th><div class="container">
+  <img src="images/9.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>District hospital</b></h1></div>
+  <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+</tr>
+</table>
+<h1></h1>
+<h1></h1>
+</table>
+<h1></h1>
+</h1></h1><br>
+<table>
+<tr>
+<th><div class="container">
+ <img src="images/10.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Gandhi hospital</b></h1></div>
+ <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+ 
+<th><div class="container">
+<img src="images/11.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Siddartha hospital</b></h1></div>
+ <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th><div class="container">
+  <img src="images/12.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Sreelatha hospital</b></h1></div>
+  <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+</tr>
+</table>
+<h1></h1>
+<h1></h1>
+</table>
+<h1></h1>
+</h1></h1><br>
+<table>
+<tr>
+<th><div class="container">
+ <img src="images/13.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Sai hospital</b></h1></div>
+ <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+ 
+<th><div class="container">
+<img src="images/14.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Aditya hospital</b></h1></div>
+ <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th><div class="container">
+  <img src="images/15.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Pragathi hospital</b></h1></div>
+  <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+</tr>
+</table>
+<h1></h1>
+<h1></h1><br>
+<table>
+<tr>
+<th><div class="container">
+  <img src="images/16.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Renuuka hospital</b></h1></div>
+  <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th><div class="container">
+  <img src="images/17.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Sathayu hospital</b></h1></div>
+  <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th><div class="container">
+  <img src="images/18.jpg" alt="Snow" style="width:400px;height:250px;">
+<div class="centered"><h1><b>Sai Sanjeevani hospital</b></h1></div>
+  <a class="button" href="#popup1"><b>Visit_info.. <span>&rarr;</span></b></a>
+</div>
+ 
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      hjhjhjhjhjhhjhj
+    </div>
+  </div>
+</div>
+ 
+ 
+</div></th>
+</tr>
+</table>
+<h1></h1>
+<h1></h1>
+</center>
+    </section><br>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Masked Hunters</h2>
+              <p>Providing availability details of Beds, Oxygen Cylinders, Plasma for Covid-19 patients.</p>
+            </div>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft ">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">About</a></li>
+                <li><a href="#" class="py-2 d-block">Search</a></li>
+                <li><a href="#" class="py-2 d-block">Latest News</a></li>
+                <li><a href="#" class="py-2 d-block">Precautions</a></li>
+                <li><a href="#" class="py-2 d-block">Hospitals</a></li>
+                <li><a href="#" class="py-2 d-block">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 pr-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Latest News</h2>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Wash your hands regularly in every half an hour.</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> May 15, 2021</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Use sanitizer oon frequently touched surfaces to kill virus.</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> June 12, 2021</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 27</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+             <h2 class="ftco-heading-2">Office</h2>
+             <div class="block-23 mb-3">
+               <ul>
+                 <li><span class="icon icon-map-marker"></span><span class="text">000, Sample location, Sample District, Sample State - 000000</span></li>
+                 <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9876543210</span></a></li>
+                 <li><a href="#"><span class="icon icon-envelope"></span><span class="text">sample@maskedhunters.com</span></a></li>
+               </ul>
+             </div>
+            </div>
+          </div>
+        </div>
+  <hr style="background-color: #fff;"/>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Masked Hunters
+     </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalRequest" tabindex="-1" role="dialog" aria-labelledby="modalRequestLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRequestLabel">Make an Appointment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form name="gform" id="gform" encrypt="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdFnk6qnYG5V-obrjwfsHor3lLqqNFkwGdyvPthhXrx60MBhQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="form-group">
+              <!-- <label for="appointment_name" class="text-black">Full Name</label> -->
+              <input type="text" class="form-control" id="entry.205990107" name="entry.205990107" required placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <!-- <label for="appointment_email" class="text-black">Email</label> -->
+              <input type="text" class="form-control" id="entry.1648110259" name="entry.1648110259" required placeholder="Email">
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <!-- <label for="appointment_date" class="text-black">Date</label> -->
+                  <input type="text" class="form-control" id="entry.1386383147" name="entry.1386383147" required placeholder="Mobile">
+                </div>    
+              </div>
+            </div>
+            <div class="form-group">
+              <!-- <label for="appointment_message" class="text-black">Message</label> -->
+              <textarea name="entry.1886532837" id="entry.1886532837" class="form-control" cols="30" rows="10" required placeholder="Message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Send Message" class="btn btn-primary">
+            </div>
+          </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+          <script src="assets/js/jquery.min.js"></script>
+          <script type="text/javascript">var submitted=false;</script>
+          <script type="text/javascript">
+              $('#gform').on('submit', function(e) {
+                  $('#gform *').fadeOut(2000);
+                  $('#gform').prepend('Your submission has been processed...');
+               });
+          </script>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
